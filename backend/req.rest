@@ -1,0 +1,196 @@
+# // GET ADMIN
+# GET http://localhost:5000/admin
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyNS0wNS0xOVQxNzowNzozNS4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNS0xOVQxNzowNzo1MC4wMDBaIiwiaWF0IjoxNzQ3NzA1NjQyLCJleHAiOjE3NDc3OTIwNDJ9._24qnf8E5f1ZDnuixKy9qhLoYIHG2PAdBWwzo-g7uLU
+
+# ###
+
+# // UPDATE ADMIN BY ID
+# PATCH  http://localhost:5000/admin/1
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InRlcyIsImVtYWlsIjoidGVzQHRlcy5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA1LTEwVDAyOjQ1OjExLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTA1LTEwVDAzOjAxOjM1LjAwMFoiLCJpYXQiOjE3NDY4NDYxMjQsImV4cCI6MTc0Njg0NjQyNH0.IC5Fz3g1k-68FHDrEB20E-2rz1w6nath_yQygsEgrYc
+
+# {
+# "nama": "test updated", 
+# "email": "test@test.com",
+# "pass": "test"
+# }
+
+# ###
+
+# // DELETE ADMIN BY ID
+# DELETE http://localhost:5000/admin/0
+
+# ###
+// REGISTER
+POST https://api-konser-559917148272.us-central1.run.app/register
+Content-Type: application/json
+
+{
+"nama": "Gimmy",
+"email": "gimmy@gmail.com",
+"umur": "20",
+"pass": "12345"
+}
+
+###
+
+// LOGIN
+POST https://api-konser-559917148272.us-central1.run.app/login 
+Content-Type: application/json
+
+{
+"email": "gimmy@gmail.com",
+"pass": "12345"
+}
+
+###
+
+// LOGOUT
+DELETE https://api-konser-559917148272.us-central1.run.app/logout
+
+###
+
+// ADD TIKET
+POST https://api-konser-559917148272.us-central1.run.app/tiket
+Content-Type: application/json
+
+{
+"nama": "Summerfest",
+"tanggal": "30 Desember 2025",
+"harga": "200000",
+"quota": "5"
+}
+
+###
+
+// GET TIKET
+GET https://api-konser-559917148272.us-central1.run.app/tiket
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyNS0wNS0yMFQwMzo1Nzo0OC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNS0yMFQwMzo1Nzo0OC4wMDBaIiwiaWF0IjoxNzQ3NzEzNDcxLCJleHAiOjE3NDc3OTk4NzF9.S4UYuanAJtGaBRIMSJ2-QTaI9T5NdmXPhKjDIipKBa0
+
+###
+
+// GET TIKET BY ID
+GET https://api-konser-559917148272.us-central1.run.app/tiket/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyNS0wNS0xOVQxNzowNzozNS4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNS0yMFQwMTo0NzoyMi4wMDBaIiwiaWF0IjoxNzQ3NzA1ODI2LCJleHAiOjE3NDc3OTIyMjZ9._bwHsU_1k-ArmjSx2ba2PX5cEZT0Y3FF3q0HfhUNueA
+
+###
+
+// UPDATE TIKET BY ID
+PATCH  https://api-konser-559917148272.us-central1.run.app/tiket/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InRlcyIsImVtYWlsIjoidGVzQHRlcy5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA1LTEyVDA4OjI0OjQ1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTA1LTEyVDA4OjMxOjAyLjAwMFoiLCJpYXQiOjE3NDcwNjM3MTUsImV4cCI6MTc0NzA2NDAxNX0.CDXK3KN7UWVDEedYB4SLhNpOTmhKVgks_2SuBDGe24k
+
+{
+"nama": "test tiket",
+"tanggal": "20 maret 2024",
+"harga": 120000,
+"quota": "5"
+}
+
+###
+
+// DELETE TIKET BY ID
+DELETE http://localhost:5000/tiket/1
+
+###
+
+// ORDER TIKET
+PATCH  https://api-konser-559917148272.us-central1.run.app/order/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyNS0wNS0yMFQwMzo1Nzo0OC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNS0yMFQwMzo1Nzo0OC4wMDBaIiwiaWF0IjoxNzQ3NzEzNDcxLCJleHAiOjE3NDc3OTk4NzF9.S4UYuanAJtGaBRIMSJ2-QTaI9T5NdmXPhKjDIipKBa0
+
+{
+    "nama": "popo",
+    "umur": "20",
+    "email": "popo@gmail.com",
+    "quantity": 1
+}
+
+###
+
+// ADD KONSER
+POST https://api-konser-559917148272.us-central1.run.app/konser
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyNS0wNS0yMFQwOTozMjozNi4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNS0yMVQwNjozMDoyNy4wMDBaIiwiaWF0IjoxNzQ3OTg2NDM4LCJleHAiOjE3NDgwNzI4Mzh9.HCW_0keJBBSB5PBjM2KVPM3GbDfBeRvfyMFuzWRz9Ss
+
+{
+"nama": "Kareem Fest",
+"tanggal": "30 Mei 2026",
+"lokasi": "Jakarta",
+"bintangtamu": "PSY feat. Snoop Dogg",
+"harga": 400000,
+"quota": 1500
+}
+
+###
+
+// GET KONSER
+GET https://api-konser-559917148272.us-central1.run.app/konser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyNS0wNS0yMFQwMzo1Nzo0OC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyNS0wNS0yMFQwMzo1Nzo0OC4wMDBaIiwiaWF0IjoxNzQ3NzEzNDcxLCJleHAiOjE3NDc3OTk4NzF9.S4UYuanAJtGaBRIMSJ2-QTaI9T5NdmXPhKjDIipKBa0
+
+###
+
+// GET KONSER BY ID
+GET http://localhost:5000/konser/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InRlcyIsImVtYWlsIjoidGVzQHRlcy5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA1LTEyVDA4OjI0OjQ1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTA1LTEyVDE1OjM1OjQ3LjAwMFoiLCJpYXQiOjE3NDcwNjYyMjYsImV4cCI6MTc0NzE1MjYyNn0.5rfL3BtxKMrKFCb9v5EQXCCuDJMmLyYHwNq7XVTfoyE
+
+###
+
+// UPDATE KONSER BY ID
+PATCH  http://localhost:5000/konser/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InRlcyIsImVtYWlsIjoidGVzQHRlcy5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA1LTEyVDA4OjI0OjQ1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTA1LTEyVDE1OjM1OjQ3LjAwMFoiLCJpYXQiOjE3NDcwNjYyMjYsImV4cCI6MTc0NzE1MjYyNn0.5rfL3BtxKMrKFCb9v5EQXCCuDJMmLyYHwNq7XVTfoyE
+
+{
+"nama": "test tiket",
+"tanggal": "21 maret 2024",
+"lokasi": "Jaksel",
+"bintangtamu": "???"
+}
+
+###
+
+// DELETE KONSER BY ID
+DELETE http://localhost:5000/konser/1
+
+###
+
+// ADD PENGUNJUNG
+POST http://localhost:5000/pengunjung
+Content-Type: application/json
+
+{
+"nama": "Budiman",
+"umur": "21",
+"email": "manusiabudiman1@gmail.com"
+}
+
+###
+
+// GET PENGUNJUNG
+GET http://localhost:5000/pengunjung
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InRlcyIsImVtYWlsIjoidGVzQHRlcy5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA1LTEyVDA4OjI0OjQ1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTA1LTEyVDE2OjEwOjI2LjAwMFoiLCJpYXQiOjE3NDcwNjcxNTIsImV4cCI6MTc0NzE1MzU1Mn0.NPFg-1S2Ta0x6u6oVSHhSyjJu0hFgOBBw7HSP6vfv7g
+
+###
+
+// GET PENGUNJUNG BY ID
+GET http://localhost:5000/pengunjung/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InRlcyIsImVtYWlsIjoidGVzQHRlcy5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA1LTEyVDA4OjI0OjQ1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTA1LTEyVDE1OjM1OjQ3LjAwMFoiLCJpYXQiOjE3NDcwNjYyMjYsImV4cCI6MTc0NzE1MjYyNn0.5rfL3BtxKMrKFCb9v5EQXCCuDJMmLyYHwNq7XVTfoyE
+
+###
+
+// UPDATE PENGUNJUNG BY ID
+PATCH  http://localhost:5000/pengunjung/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InRlcyIsImVtYWlsIjoidGVzQHRlcy5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA1LTEyVDA4OjI0OjQ1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTA1LTEyVDE1OjM1OjQ3LjAwMFoiLCJpYXQiOjE3NDcwNjYyMjYsImV4cCI6MTc0NzE1MjYyNn0.5rfL3BtxKMrKFCb9v5EQXCCuDJMmLyYHwNq7XVTfoyE
+
+{
+"nama": "budiman",
+"umur": "25",
+"email": "manusiabudiman1@gmail.com"
+}
+
+###
+
+// DELETE PENGUNJUNG BY ID
+DELETE http://localhost:5000/pengunjung/1
